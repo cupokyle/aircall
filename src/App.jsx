@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import ActivityList from "./components/ActivityList.jsx";
+import Main from "./components/Main.jsx";
+import Footer from "./components/Footer.jsx";
 
 import Header from "./components/Header.jsx";
 
@@ -9,9 +10,9 @@ const App = () => {
     <div className="container">
       <Header />
       <div className="container-view">
-        {/* Parsed Activites will go here */}
-        <ActivityList />
+        <Main />
       </div>
+      <Footer />
     </div>
   );
 };
