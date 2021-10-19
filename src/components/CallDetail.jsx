@@ -51,15 +51,28 @@ const CallDetail = (props) => {
           <ImPhone size={30} />
           <p>CALL BACK</p>
         </button>
-        <button
-          onClick={() => {
-            archiveCall();
-            returnHome();
-          }}
-        >
-          <ImDrawer size={30} />
-          <p>ARCHIVE</p>
-        </button>
+        {!view.is_archived && (
+          <button
+            onClick={() => {
+              archiveCall();
+              returnHome();
+            }}
+          >
+            <ImDrawer size={30} />
+            <p>ARCHIVE</p>
+          </button>
+        )}
+        {view.is_archived && (
+          <button
+            onClick={() => {
+              archiveCall();
+              returnHome();
+            }}
+          >
+            <ImDrawer size={30} />
+            <p>UN-ARCHIVE</p>
+          </button>
+        )}
       </div>
     </div>
   );
