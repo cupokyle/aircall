@@ -35,6 +35,7 @@ const CallDetail = (props) => {
           {view.via && <h2>{view.via}</h2>}
           {view.duration && (
             <div>
+              <p>{view.call_type.toUpperCase()}</p>
               <p>{view.duration} minutes</p>
               <p>{view && <TimeAgo datetime={view.created_at} />}</p>
             </div>
