@@ -18,8 +18,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div>
-      <h3>main</h3>
+    <div className="mainContainer">
       <ActivityList calls={calls} />
     </div>
   );

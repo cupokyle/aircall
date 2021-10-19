@@ -1,3 +1,25 @@
 .activityItem {
-  border: green 1px dotted;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  height: 60px;
+}
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.callContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: orange 2px solid;
+  height: 100%;
+}
+.callContainer h2 {
+  text-align: center;
+  font-size: 20px;
 }
