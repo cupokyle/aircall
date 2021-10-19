@@ -7,8 +7,8 @@ import CallDetail from "./CallDetail.jsx";
 
 const ActivityList = (props) => {
   // Set a view state that defaults to the Acitvity List
-  const [view, setView] = useState("LIST");
-  const { calls, getCallData, getArchiveData } = props;
+  // const [view, setView] = useState("LIST");
+  const { calls, getCallData, getArchiveData, view, setView } = props;
 
   //Using view state, I archive a call and return to list screen
   function archiveCall() {

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import ActivityList from "./ActivityList.jsx";
 import axios from "axios";
 
-const Main = () => {
+const Main = (props) => {
+  const { view, setView } = props;
   // Set a call state that contains the response from our Calls API
   const [calls, setCalls] = useState([]);
   const [archive, setArchive] = useState([]);
@@ -44,6 +45,8 @@ const Main = () => {
         calls={calls}
         getArchiveData={getArchiveData}
         getCallData={getCallData}
+        view={view}
+        setView={setView}
       />
     </div>
   );

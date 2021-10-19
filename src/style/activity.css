@@ -5,7 +5,10 @@
   background-color: rgb(222, 231, 243);
   border-radius: 10px;
   height: 60px;
-  margin-top: 5px;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .activityItem:hover {
@@ -31,11 +34,15 @@
   margin: 0;
 }
 
+.timeInfo {
+  width: 25%;
+}
+
 .callContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: orange 2px solid;
+  border-radius: 10px;
   height: 100%;
 }
 .callContainer h2 {

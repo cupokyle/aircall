@@ -6,13 +6,14 @@ import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 
 const App = () => {
+  const [view, setView] = useState("LIST");
   return (
     <div className="container">
       <Header />
       <div className="container-view">
-        <Main />
+        <Main view={view} setView={setView} />
       </div>
-      <Footer />
+      <Footer view={view} setView={setView} />
     </div>
   );
 };

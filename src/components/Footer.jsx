@@ -1,9 +1,24 @@
 import React from "react";
+import { HiArchive, HiOutlineIdentification } from "react-icons/hi";
+import { GrTty } from "react-icons/gr";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { view, setView } = props;
   return (
     <footer>
-      <h2>I'm a footer</h2>
+      <div className="footerButtons">
+        <button>
+          <HiOutlineIdentification size={55} />
+        </button>
+        {view === "LIST" && (
+          <button class="midButton">
+            <GrTty size={75} />
+          </button>
+        )}
+        <button>
+          <HiArchive size={55} />
+        </button>
+      </div>
     </footer>
   );
 };
