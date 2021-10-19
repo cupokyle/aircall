@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ActivityList from "./ActivityList.jsx";
+import ArchiveList from "./ArchiveList.jsx";
 import axios from "axios";
 
 const Main = (props) => {
@@ -41,13 +42,16 @@ const Main = (props) => {
 
   return (
     <div className="mainContainer">
-      <ActivityList
-        calls={calls}
-        getArchiveData={getArchiveData}
-        getCallData={getCallData}
-        view={view}
-        setView={setView}
-      />
+      {view !== "ARCHIVE" && (
+        <ActivityList
+          calls={calls}
+          getArchiveData={getArchiveData}
+          getCallData={getCallData}
+          view={view}
+          setView={setView}
+        />
+      )}
+      {view === "ARCHIVE" && <ArchiveList />}
     </div>
   );
 };
