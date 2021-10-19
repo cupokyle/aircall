@@ -4,7 +4,7 @@ import { ImBackward, ImDrawer, ImPhone, ImUser } from "react-icons/im";
 import { HiPhoneOutgoing, HiPhoneIncoming, HiViewList } from "react-icons/hi";
 
 const CallDetail = (props) => {
-  const { view, setView } = props;
+  const { view, setView, archiveCall } = props;
 
   // Use state to return to main list
   function returnHome() {
@@ -50,7 +50,12 @@ const CallDetail = (props) => {
           <ImPhone size={30} />
           <p>CALL BACK</p>
         </button>
-        <button onClick={returnHome}>
+        <button
+          onClick={() => {
+            archiveCall();
+            returnHome();
+          }}
+        >
           <ImDrawer size={30} />
           <p>ARCHIVE</p>
         </button>

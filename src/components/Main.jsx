@@ -21,6 +21,17 @@ const Main = () => {
       setArchive(archiveData);
     });
   }
+
+  function archiveCall() {
+    axios
+      .post(`https://aircall-job.herokuapp.com/activities/${view.id}`, {
+        is_archived: true,
+      })
+      .then((res) => {
+        getCallData();
+        getArchiveData();
+      });
+  }
   // When Main component loads, request from API
   useEffect(() => {
     getCallData();
@@ -29,7 +40,11 @@ const Main = () => {
 
   return (
     <div className="mainContainer">
-      <ActivityList calls={calls} />
+      <ActivityList
+        calls={calls}
+        getArchiveData={getArchiveData}
+        getCallData={getCallData}
+      />
     </div>
   );
 };
