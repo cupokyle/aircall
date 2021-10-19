@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ActivityItem from "./components/ActivityItem.jsx";
+import ActivityList from "./components/ActivityList.jsx";
 
 import Header from "./components/Header.jsx";
 
@@ -9,9 +9,8 @@ const App = () => {
     <div className="container">
       <Header />
       <div className="container-view">
-        {/* ActivityList will go here */}
-        <ActivityItem />
-        <ActivityItem />
+        {/* Parsed Activites will go here */}
+        <ActivityList />
       </div>
     </div>
   );
