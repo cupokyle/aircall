@@ -7,7 +7,6 @@ const ActivityList = (props) => {
   const { calls } = props;
   return (
     <div className="callContainer">
-      <h2>My Calls</h2>
       {calls.map((call) => (
         <ActivityItem key={call.id} call={call} />
       ))}

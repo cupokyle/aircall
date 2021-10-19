@@ -1,18 +1,27 @@
 import React from "react";
-import { FaBeer } from "react-icons/fa";
+import TimeAgo from "timeago-react";
+import { HiPhoneOutgoing, HiPhoneIncoming } from "react-icons/hi";
 
 const ActivityItem = (props) => {
   const { call } = props;
   return (
     <div className="activityItem">
       <div className="archiveButton">
-        <FaBeer />
+        {call.direction === "inbound" && (
+          <HiPhoneIncoming size={30} color={"crimson"} />
+        )}
+        {call.direction === "outbound" && (
+          <HiPhoneOutgoing size={30} color={"green"} />
+        )}
       </div>
       <div className="mainInfo">
-        {call && call.call_type}
-        {call && call.direction}
+        {call.direction === "inbound" && <span>{call.from} </span>}
+        {call.direction === "outbound" && <span>{call.to}</span>}
+        <p>{call.duration} minutes</p>
       </div>
-      <div className="timeInfo">{call && Date(call.created_at)}</div>
+      <div className="timeInfo">
+        {call && <TimeAgo datetime={call.created_at} />}
+      </div>
     </div>
   );
 };

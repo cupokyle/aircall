@@ -2,14 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightsteelblue;
+  background-color: rgb(222, 231, 243);
   border-radius: 10px;
   height: 60px;
 }
 .mainInfo {
   display: flex;
   flex-direction: column;
+  width: 65%;
   height: 100%;
+  justify-content: space-around;
+  align-items: left;
+  padding-left: 15px;
+}
+
+.mainInfo span {
+  font-size: 20px;
+}
+
+.mainInfo p {
+  margin: 0;
 }
 
 .callContainer {
