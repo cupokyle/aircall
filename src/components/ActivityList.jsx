@@ -10,7 +10,7 @@ const ActivityList = (props) => {
       <h3>I'm the ActivityList</h3>
       <ul>
         {calls.map((call) => (
-          <li key={call.id}>{call.id}</li>
+          <ActivityItem key={call.id} call={call} />
         ))}
       </ul>
     </div>
