@@ -36,6 +36,8 @@ footer button:hover {
 }
 
 .footerButtons .midButton {
+  padding: 10px;
+  margin: 10px;
   position: relative;
   bottom: 55px;
   border-radius: 50%;
