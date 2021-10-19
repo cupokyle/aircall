@@ -51,7 +51,9 @@ const Main = (props) => {
           setView={setView}
         />
       )}
-      {view === "ARCHIVE" && <ArchiveList />}
+      {view === "ARCHIVE" && (
+        <ArchiveList archive={archive} setArchive={setArchive} />
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import TimeAgo from "timeago-react";
-import { ImBackward, ImDrawer, ImPhone, ImUser } from "react-icons/im";
-import { HiPhoneOutgoing, HiPhoneIncoming, HiViewList } from "react-icons/hi";
+import { ImDrawer, ImPhone, ImUser } from "react-icons/im";
+import { HiPhoneOutgoing, HiPhoneIncoming, HiAnnotation } from "react-icons/hi";
 
 const CallDetail = (props) => {
   const { view, setView, archiveCall } = props;
@@ -44,8 +44,8 @@ const CallDetail = (props) => {
       </div>
       <div className="buttonContainer">
         <button onClick={returnHome}>
-          <ImBackward size={30} />
-          <p>BACK</p>
+          <HiAnnotation size={30} />
+          <p>SMS</p>
         </button>
         <button onClick={returnHome}>
           <ImPhone size={30} />

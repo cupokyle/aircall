@@ -5,6 +5,10 @@ import { GrList, GrTty } from "react-icons/gr";
 const Footer = (props) => {
   const { view, setView } = props;
 
+  function goToList() {
+    setView("LIST");
+  }
+
   function goToArchive() {
     setView("ARCHIVE");
   }
@@ -12,7 +16,7 @@ const Footer = (props) => {
   return (
     <footer>
       <div className="footerButtons">
-        <button>
+        <button onClick={goToList}>
           <GrList />
         </button>
         {view === "LIST" && (

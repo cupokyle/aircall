@@ -2,24 +2,27 @@ import React from "react";
 import TimeAgo from "timeago-react";
 import { HiPhoneOutgoing, HiPhoneIncoming } from "react-icons/hi";
 
-const ArchiveItem = () => {
+const ArchiveItem = (props) => {
+  const { archiveCall } = props;
   return (
-    <div className="activityItem" onClick={selectCall}>
+    <div className="activityItem">
       <div className="archiveButton">
-        {call.direction === "inbound" && (
+        {archiveCall.direction === "inbound" && (
           <HiPhoneIncoming size={30} color={"crimson"} />
         )}
-        {call.direction === "outbound" && (
+        {archiveCall.direction === "outbound" && (
           <HiPhoneOutgoing size={30} color={"green"} />
         )}
       </div>
       <div className="mainInfo">
-        {call.direction === "inbound" && <span>{call.from} </span>}
-        {call.direction === "outbound" && <span>{call.to}</span>}
-        <p>{call.duration} minutes</p>
+        {archiveCall.direction === "inbound" && (
+          <span>{archiveCall.from} </span>
+        )}
+        {archiveCall.direction === "outbound" && <span>{archiveCall.to}</span>}
+        <p>{archiveCall.duration} minutes</p>
       </div>
       <div className="timeInfo">
-        {call && <TimeAgo datetime={call.created_at} />}
+        {archiveCall && <TimeAgo datetime={archiveCall.created_at} />}
       </div>
     </div>
   );
