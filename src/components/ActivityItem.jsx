@@ -3,9 +3,14 @@ import TimeAgo from "timeago-react";
 import { HiPhoneOutgoing, HiPhoneIncoming } from "react-icons/hi";
 
 const ActivityItem = (props) => {
-  const { call } = props;
+  const { call, view, setView } = props;
+
+  function selectCall() {
+    setView(call);
+  }
+
   return (
-    <div className="activityItem">
+    <div className="activityItem" onClick={selectCall}>
       <div className="archiveButton">
         {call.direction === "inbound" && (
           <HiPhoneIncoming size={30} color={"crimson"} />

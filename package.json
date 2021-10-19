@@ -19,6 +19,7 @@
     "timeago-react": "^3.0.4"
   },
   "devDependencies": {
+    "source-map-loader": "^1.0.0",
     "babel-core": "6.26.*",
     "babel-loader": "7.1.*",
     "babel-preset-env": "1.7.0",

@@ -5,7 +5,14 @@
   background-color: rgb(222, 231, 243);
   border-radius: 10px;
   height: 60px;
+  margin-top: 5px;
 }
+
+.activityItem:hover {
+  cursor: pointer;
+  background-color: lightsteelblue;
+}
+
 .mainInfo {
   display: flex;
   flex-direction: column;
@@ -27,7 +34,7 @@
 .callContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   border: orange 2px solid;
   height: 100%;
 }
