@@ -1,10 +1,9 @@
 footer {
-  height: 5%;
+  height: 11%;
   margin: 0 auto;
   text-align: center;
   border-top: 1px rgba(0, 0, 0, 0.1) solid;
-  background-color: #f0f3f8;
-  background-image: url("https://www.transparenttextures.com/patterns/groovepaper.png");
+  background-color: #427aa1;
 }
 
 footer svg {
@@ -26,8 +25,9 @@ footer .footerButtons {
 
 footer button:hover {
   cursor: pointer;
-  background-color: #d1cdc7;
-  border-radius: 50%;
+  animation: shake 1.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
 }
 
 .footerButtons button {
@@ -43,12 +43,44 @@ footer button:hover {
   position: relative;
   bottom: 55px;
   border-radius: 50%;
-  background-color: #b0c4de;
-  background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
+  background-color: #ebf2fa;
+  box-shadow: 0 0 5px 3px black;
   height: 80px;
   width: 80px;
+    text-shadow: 0 1px 2px #283D3B;
+  animation: jiggle 5s infinite ease-in;
 }
 
 .midButton:hover {
-  background-color: #d1cdc7;
+ box-shadow: 0 0 5px 5px #05668d;
+}
+
+@keyframes jiggle {
+  45%, 65% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(1.1, 0.9)
+  }
+  55% {
+    transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  60% {
+    transform: scale(1.0, 1.0) translate(0, -5px)
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+}
 }

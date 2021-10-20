@@ -4,14 +4,16 @@
   margin: 0;
   padding: 20px 0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background-color: #d1cdc7;
+  background-color: #427aa1;
   border-radius: 0 0 90% 0;
+  box-shadow: 0 0 5px 1px black;
 }
 
 .headerLogo svg {
   margin-left: 10px;
   width: 60%;
   height: 100%;
+  filter: contrast(10);
 }
 
 .headerLogo svg:hover {

@@ -16,7 +16,7 @@ const ActivityItem = (props) => {
           <HiPhoneIncoming size={30} color={"crimson"} />
         )}
         {call.direction === "outbound" && (
-          <HiPhoneOutgoing size={30} color={"green"} />
+          <HiPhoneOutgoing size={30} color={'#2ea100'} />
         )}
       </div>
       <div className="mainInfo">

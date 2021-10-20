@@ -20,7 +20,7 @@ const Footer = (props) => {
           <GrList />
         </button>
         {(view === "LIST" || view === "ARCHIVE") && (
-          <button class="midButton">
+          <button class="midButton" >
             <GrTty />
           </button>
         )}
