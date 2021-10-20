@@ -34,7 +34,7 @@ header #settings {
 }
 
 header #settings:hover {
-  color: lightsteelblue;
+  color: #427aa1;
   cursor: pointer;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);

@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 #app {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Lato', sans-serif;
   left: 0;
   top: 0;
   right: 0;

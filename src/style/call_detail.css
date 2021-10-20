@@ -63,7 +63,7 @@
 .buttonContainer button:hover {
   background-color: #05668d;
   cursor: pointer;
-  animation: shake 1.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
 }
