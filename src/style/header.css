@@ -1,13 +1,34 @@
-header {
+.headerLogo {
   height: 8%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 0;
   padding: 20px 0;
-  text-align: center;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #d1cdc7;
+  border-radius: 0 0 90% 0;
 }
 
-header svg {
-  display: block;
-  width: 100%;
+.headerLogo svg {
+  margin-left: 10px;
+  width: 60%;
   height: 100%;
+}
+
+.headerLogo svg:hover {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header #settings {
+  margin: 20px;
+}
+
+header #settings:hover {
+  color: lightsteelblue;
+  cursor: pointer;
 }

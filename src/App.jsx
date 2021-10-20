@@ -9,7 +9,7 @@ const App = () => {
   const [view, setView] = useState("LIST");
   return (
     <div className="container">
-      <Header />
+      <Header setView={setView} />
       <div className="container-view">
         <Main view={view} setView={setView} />
       </div>

@@ -9,7 +9,8 @@
   margin: 10px;
   padding: 20px;
   border-radius: 50%;
-  background-color: lightsteelblue;
+  background-color: #b0c4de;
+  background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
 }
 
 .callProfile .userNumber {
@@ -25,8 +26,9 @@
 }
 
 .callProfile .callData {
-  width: 100%;
-  background-color: lightsteelblue;
+  width: 60%;
+  background-color: #b0c4de;
+  background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
   font-size: 16px;
   height: 100%;
   margin: 5px;
@@ -52,7 +54,7 @@
   background: transparent;
   border: none;
   border-radius: 50%;
-  background-color: thistle;
+  background-color: #d1cdc7;
 }
 
 .buttonContainer button:hover {
