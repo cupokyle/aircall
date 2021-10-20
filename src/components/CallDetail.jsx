@@ -4,7 +4,7 @@ import { ImDrawer, ImPhone, ImUser } from "react-icons/im";
 import { HiPhoneOutgoing, HiPhoneIncoming, HiAnnotation } from "react-icons/hi";
 
 const CallDetail = (props) => {
-  const { view, setView, archiveCall } = props;
+  const { view, setView, archiveCall, unarchiveCall } = props;
 
   // Use state to return to main list
   function returnHome() {
@@ -65,7 +65,7 @@ const CallDetail = (props) => {
         {view.is_archived && (
           <button
             onClick={() => {
-              archiveCall();
+              unarchiveCall();
               returnHome();
             }}
           >

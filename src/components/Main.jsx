@@ -56,6 +56,8 @@ const Main = (props) => {
           archive={archive}
           setArchive={setArchive}
           setView={setView}
+          getArchiveData={getArchiveData}
+          getCallData={getCallData}
         />
       )}
     </div>

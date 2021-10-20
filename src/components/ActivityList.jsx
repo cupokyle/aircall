@@ -21,19 +21,40 @@ const ActivityList = (props) => {
         getArchiveData();
       });
   }
+
+  function unarchiveCall() {
+    axios
+      .post(`https://aircall-job.herokuapp.com/activities/${view.id}`, {
+        is_archived: false,
+      })
+      .then((res) => {
+        getCallData();
+        getArchiveData();
+      });
+  }
+
   return (
     <div className="callContainer">
-      {view === "LIST" &&
-        calls.map((call) => (
-          <ActivityItem
-            key={call.id}
-            call={call}
-            view={view}
-            setView={setView}
-          />
-        ))}
+      {view === "LIST" && (
+        <main>
+          <h1>Call History</h1>
+          {calls.map((call) => (
+            <ActivityItem
+              key={call.id}
+              call={call}
+              view={view}
+              setView={setView}
+            />
+          ))}
+        </main>
+      )}
       {view !== "LIST" && (
-        <CallDetail view={view} setView={setView} archiveCall={archiveCall} />
+        <CallDetail
+          view={view}
+          setView={setView}
+          archiveCall={archiveCall}
+          unarchiveCall={unarchiveCall}
+        />
       )}
     </div>
   );
