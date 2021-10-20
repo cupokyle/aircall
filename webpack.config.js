@@ -26,6 +26,11 @@ module.exports = {
     ],
   },
   stats: { children: false },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
