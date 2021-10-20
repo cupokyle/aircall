@@ -26,9 +26,14 @@ header {
 
 header #settings {
   margin: 20px;
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform;
 }
 
 header #settings:hover {
   color: lightsteelblue;
   cursor: pointer;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
