@@ -7,19 +7,22 @@
   "author": "",
   "license": "",
   "private": false,
+  "homepage": "http://cupokyle.github.io/aircall",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.23.0",
+    "gh-pages": "^3.2.3",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-icons": "^4.3.1",
     "timeago-react": "^3.0.4"
   },
   "devDependencies": {
-    "source-map-loader": "^1.0.0",
     "babel-core": "6.26.*",
     "babel-loader": "7.1.*",
     "babel-preset-env": "1.7.0",
@@ -27,6 +30,7 @@
     "css-loader": "2.1.*",
     "html-loader": "0.5.*",
     "html-webpack-plugin": "3.2.*",
+    "source-map-loader": "^1.0.0",
     "style-loader": "0.23.*",
     "webpack": "4.29.*",
     "webpack-cli": "3.2.*",
